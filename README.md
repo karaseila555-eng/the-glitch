@@ -20,3 +20,9 @@ Future updates will include additional security testing tools and new features t
 The Zeglet is currently under development, and more tools and improvements will be added in upcoming versions.
 
 **Developer:** Karas
+to install
+git clone https://github.com/karaseila555-eng/the-glitch.git
+
+
+to start
+python3 Glitch.py
