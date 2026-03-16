@@ -24,5 +24,6 @@ to install
 git clone https://github.com/karaseila555-eng/the-glitch.git
 
 
-to start
-python3 Glitch.py
+to start     python3 'the Glitch.py'
+
+
