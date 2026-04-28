@@ -6,13 +6,100 @@ import sys
 import requests
 import csv
 from bs4 import BeautifulSoup
-#---------
+import webbrowser
+
+#---------    
 import logging
 from scapy.all import ARP, send, sniff
 from scapy.layers.inet import IP
 from scapy.layers.dns import DNS , DNSQR 
 import threading
 logging.getLogger("scapy.runtime").setLevel(logging.ERROR) 
+#---------
+def ph_num():
+    print(' after open page of facebook please enter a phone number then the profile while show !!!')
+    print('enter [ctrl + c] to Quit ')
+    webbrowser.open('https://www.facebook.com/login/identify/?ci=Ac-rE3l407p3fl5AZcr9Sx2csmDXTtecT6oqomN1N-5Xk53jNhHasM55U\
+-onDfDHHsQtNLChQAei5lvk5B7r-vjMflnSV8WHahB5VpP5cp6cAHp5B1S8dVBuItrkyLNM0f7aZM92vGVUINNa6iYB7MtAroSJmBhXjFdMrlk8jLQ6r1VWl9W\
+KwjY2aLkxFmBrd99VQIC86x70sGuUffU7MwW2eQ26-KyBdqnuTpALP0fpQMePBSjNi85C_iNGwjEkQMdb0AEEgy5LeP7i_ls0vHuAkXnW')
+def os_tool():
+    line_x = '----------------------------'
+    print('\033[91m')
+    print(' after open page of facebook please enter a phone number then the profile while show !!!')
+    print('لو ظهر  اى حساب بعد ملدخل رقم التليفون يقبى الحساب مربوط بى الرقم دا ')
+    print('mode = {osint} ')
+    print(line_x)
+    messagee = """
+    1- by phone number
+    2- Quit
+
+
+
+    """
+    print(line_x)
+    while True:
+        print(messagee)
+        qu = input('enter your choice : ')
+        if qu == '1':
+            ph_num()
+        elif qu == '2':
+            break
+        else:
+            print('please enter a number from 1 to 2 !!!')
+
+def use_tool():
+    print('\033[92m')
+    print('mode = [password created]')
+    gkg = '#############'
+    for hj in gkg:
+        print(hj)
+    print('enter [ctrl + c] to quit ')
+    #----------down----------------
+    kskss = os.system('git clone https://github.com/Mebus/cupp.git > /dev/null 2>&1')
+    if kskss == 0:
+       print('ok download true')
+    else:
+       print('there was some thing wrong or the tool was excist !!!')
+    #------------------------------
+    #--------enter-----------
+    os.chdir('cupp')
+    #-----------------------
+    #----------------------start
+    print('powered by [the Glitch]')
+    print('the text is in folder cupp')
+    pyth = [os.system('python3 cupp.py -i')]
+    print(pyth.pop(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ))
+    #----------------------
+def info_gen():
+    while True:
+        print('\033[92m')
+        lf = "---------------"
+        for kh in lf:
+            print(kh)
+        mess = """
+        -----------------------------
+        1- what this tool use
+        2- use tool
+        3- exit
+        -----------------------------
+        """
+        print(mess)
+        enter_cpp = input('enter your choice : ')
+        if enter_cpp == '1':
+           inform = """
+           العربى 
+           دى اداه عباره انك بتخل معلومات عن الشخص و بتلعلق قايمه باسوردات مسنوحاه من المعلومات الى دخلتها
+           english
+           This tool generates a personalized password list based on a target's personal information. By inputting details like names, birthdays, nicknames,
+           """
+           print(inform)
+        elif enter_cpp == "2":
+            use_tool()
+        elif enter_cpp == "3":
+            break
+        else:
+            print('please enter anumber from 1 to 3 !!!')
+#--------- 
 #---------
 def ip_con():
     #---------
@@ -111,7 +198,7 @@ def ddos_ata():
     print('mode = {ddos atack}')
     print('to Quit enter [ctrl + c ]')
     print('\033[91m')
-    os.system('git clone https://github.com/palahsu/DDoS-Ripper.git')
+    if not os.path.exists("DDoS-Ripper"): os.system('https://github.com/palahsu/DDoS-Ripper.git')
     os.chdir("DDoS-Ripper")
     print('--------------------------------------')
     info = input('inter the link of the website : ')
@@ -248,15 +335,16 @@ def hack_tool():
     1- pnshing tool        2- hacking camera
     3- ddos atack          4- make fake wifi
     5- contorl our device in the network (^_^)
-
-
+    6- Social Engineering Pass-Gen 
+    7- exit
+    8- osint tool
+  
 
    
 
     """
     print("\033[94m")
     print("-----------------------------------")
-    print(messege)
     print('------------------------------')
     print('this tool is work only on kail')
     print('enter [ctrl + c] to quit')
@@ -264,8 +352,11 @@ def hack_tool():
     print("there was more tool after the next virsion of theglitch [powered by karas]")
     print('------------------------------')
     while True:
+        print('----------------------------')
+        print(messege)
+        print('----------------------------')
         print("0--0--0--0--0--0--0--0--0--0--0--0--0")
-        mts = input('enter your choice from 1 to 5 : ')
+        mts = input('enter your choice from 1 to 8 : ')
         print('0--0--0--0--0--0--0--0--0--0--0--0--0')
         if mts =="1":
             zp_hi()
@@ -277,8 +368,14 @@ def hack_tool():
             hack_wifi()
         elif mts == "5":
             ip_con()
+        elif mts == "6":
+            info_gen()
+        elif mts == '8':
+            os_tool()
+        elif mts == '7':
+            break
         else:
-            print('please enter number from 1 to 5 !!!')
+            print('please enter number from 1 to 8 !!!')
     print('-----------------------------------')
 def siem_net():
         print('\033[92m')
@@ -291,7 +388,7 @@ def siem_net():
                 print('/\/\/\/\ Start Scanning Network /\/\/\/\ ')
   
             # تشغيل الأمر وأخذ النتيجة
-            output = subprocess.check_output('nmap 192.168.1.0/24', shell=True, text=True)
+            output = subprocess.check_output('nmap -sn 192.168.1.0/24', shell=True, text=True)
             
             # 1. نقطع النص لأسطر
             lines = output.splitlines()
@@ -456,6 +553,7 @@ for i in xss:
     print(i)
 message = """-------------------------------------------
 [warning  waiting from another version to get more tool and less bugs !!!]
+[this tool is use some librarys and another dowunload it frist to work succussfully (^_^)]
 1- who is devolper
 2- find dns
 3- Quit
@@ -464,8 +562,8 @@ message = """-------------------------------------------
 6- find all in formation of websits[not all apen ports !!!]
 7- scan the network 
 8- hacking tools
-9- know some information of your
-10 - web sparcing 
+9- know some information of your computer
+10 - Web Scraping
 --------------------------------------------------------"""
 while True:
     print(message)
