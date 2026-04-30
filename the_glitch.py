@@ -21,9 +21,7 @@ logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 def ph_num():
     print(' after open page of facebook please enter a phone number then the profile while show !!!')
     print('enter [ctrl + c] to Quit ')
-    webbrowser.open('https://www.facebook.com/login/identify/?ci=Ac-rE3l407p3fl5AZcr9Sx2csmDXTtecT6oqomN1N-5Xk53jNhHasM55U\
--onDfDHHsQtNLChQAei5lvk5B7r-vjMflnSV8WHahB5VpP5cp6cAHp5B1S8dVBuItrkyLNM0f7aZM92vGVUINNa6iYB7MtAroSJmBhXjFdMrlk8jLQ6r1VWl9W\
-KwjY2aLkxFmBrd99VQIC86x70sGuUffU7MwW2eQ26-KyBdqnuTpALP0fpQMePBSjNi85C_iNGwjEkQMdb0AEEgy5LeP7i_ls0vHuAkXnW')
+    webbrowser.open('https://www.facebook.com/login/identify/?ci=Ac-rE3l407p3fl5AZcr9Sx2csmDXTtecT6oqomN1N-5Xk53jNhHasM55U-onDfDHHsQtNLChQAei5lvk5B7r-vjMflnSV8WHahB5VpP5cp6cAHp5B1S8dVBuItrkyLNM0f7aZM92vGVUINNa6iYB7MtAroSJmBhXjFdMrlk8jLQ6r1VWl9WKwjY2aLkxFmBrd99VQIC86x70sGuUffU7MwW2eQ26-KyBdqnuTpALP0fpQMePBSjNi85C_iNGwjEkQMdb0AEEgy5LeP7i_ls0vHuAkXnW')
 
 
 def os_tool():
@@ -308,7 +306,7 @@ def hack_cam():
 
 # more detailed name for the function
 def hacking_tools_mode():
-
+    time.sleep(2)
     print('^' * 12)
     # Using multi-line instead of escape codes
     logo = r"""
@@ -541,40 +539,41 @@ def scan_net():
 
 
 # تجربة الدالة
-scan_net
+# scan_net() # Unused
 
 
 def find_dns():
     print('\033[92m')
-    print('mode = {find_dns}')
+    print('mode = {DNS Lookup}')
     print('\033[92m')
     print('------------------------------------------------------')
-    domain_name = input('enetr your domain forexample(google.com) :')
+    domain_name = input('Enter your domain for example(google.com) :')
     print('------------------------------------------------------')
     try:
         ip_dns = socket.gethostbyname_ex(domain_name)
-        print("- - - - - - - rseault - - - - - - - -")
+        print("- - - - - - - resault - - - - - - - -")
         xssa = "***********"
         for i in xssa:
             print(i)
         time.sleep(1)
         print('-------------------------------')
-        print(f"your website is {domain_name}")
+        print(f"{domain_name}")
         print('-------------------------------')
-        print(f'the dns of {domain_name} is : {ip_dns}')
-        print('end [have a nice time (^_^)] ......')
+        print(f'The DNS of {domain_name} is : {ip_dns}')
+        print('Done [have a nice time (^_^)] ......')
 
     except socket.gaierror:
 
-        print('wrong enput please check the link !!!')
+        print('Wrong input please check the website name')
 
 
-print('-------------------------------------')
-print(' The Glitch v 1.0 [beta]')
-print('[POWERED BY KARAS]')
-print('scanning is work at kail only ')
-print('95 % tools is work just in kail')
-print('-------------------------------------')
+print("""
+    -------------------------------------
+    The Glitch v 1.0 [beta]')
+    [POWERED BY KARAS]')
+    Scanning works for kail only')
+    95 % of tools will work only in kail')
+    -------------------------------------""")
 time.sleep(1)
 face = """
 \033[93m
@@ -592,60 +591,60 @@ face = """
             \__________/
              /        \\
 
+    \033[93m  TOO DANGEROUS !!!
     """
 
 print(face)
-word = "\033[93m  TOO DANGERUS !!!"
-print(word)
 time.sleep(1)
 xss = '##########'
 for i in xss:
     print(i)
-message = """-------------------------------------------
-[warning  waiting from another version to get more tool and less bugs !!!]
-[this tool is use some librarys and another dowunload it frist to work succussfully (^_^)]
-1- who is devolper
-2- find dns
-3- Quit
-4- find my ip network
-5- find all ports open in [ip ]
-6- find all in formation of websits[not all apen ports !!!]
-7- scan the network 
-8- hacking tools
-9- know some information of your computer
-10 - Web Scraping
---------------------------------------------------------"""
+message = """
+-------------------------------------------
+[Warning: Awaiting a newer version to resolve bugs and add features.]
+[Note: This tool requires specific libraries. Please download dependencies first for successful operation. (^_^)]
+[1] View developer information
+[2] Perform DNS lookup
+[3] Identify local network IP
+[4] Scan for open ports on a specific IP
+[5] Gather website information (General metadata)
+[6] Scan the network
+[7] Access security/penetration testing tools
+[8] View system information
+[9] Web scraping
+[10] Quit
+--------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"""
 while True:
     print(message)
-
-    print('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%')
-    enter = input('enter your choice from 1 to 10[3 for quit] : ')
-    css = "-------------------------------------"
-    if enter == "1":
-        print(css)
-        print('devolper is [karas]  phone number is [***********8****]')
-    elif enter == "2":
-        find_dns()
-    elif enter == "4":
-        scan_net()
-    elif enter == "5":
-        all_port()
-    elif enter == "6":
-        in_fo()
-    elif enter == "7":
-        siem_net()
-    elif enter == "8":
-        print('wating %')
-        time.sleep(2)
-        hacking_tools_mode()
-    elif enter == "9":
-        info_mation()
-    elif enter == "10":
-        web_spar()
-    elif enter == "3":
-        print('----------------')
-        print('good bye')
-        print('----------------')
-        break
-    else:
-        print(f'word {enter} is not true please enter a number from 1 to 10 !!!')
+    main_menu_choice = input('Enter your choice from 1 to 10 : ')
+    match main_menu_choice:
+        case "1":
+            print("""
+-------------------------------------
+devolper is [karas]  phone number is [***********8****]""")
+        case "2":
+            find_dns()
+        case "3":
+            scan_net()
+        case "4":
+            all_port()
+        case "5":
+            in_fo()
+        case "6":
+            siem_net()
+        case "7":
+            hacking_tools_mode()
+        case "8":
+            info_mation()
+        case "9":
+            web_spar()
+        case "10":
+            print(
+                """----------------
+good bye
+----------------""")
+            break
+        case _:
+            print(
+                f'{main_menu_choice} is invalid choise please enter a number from 1 to 10')
